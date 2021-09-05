@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Oswald&display=swap');
+
+*{
+    box-sizing: border-box;
+    padding: none;
+}
+:root{
+    --bgc: #226666;
+    --secbgc: #D56B6B;
+    --sec-acc: #7F1515;
+}
+body{
+    background-color: var(--bgc);
+    font-family: 'Oswald', sans-serif;
+    text-align: center;
+    color: white;
+}
+#page-container{
+    position: absolute;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+#content-wrap{
+    padding-bottom: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+@media only screen and (max-width:1000px) {
+    #content-wrap{
+        justify-content: flex-start;
+        padding: 5px;
+    }
+    #content-wrap>*{
+        margin-bottom: 25px;
+    }
+}
+footer{
+    position: absolute;
+    bottom: 0;
+    width: 90%;
+    height: 2.5rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Title */
+h1{
+    font-family: 'Kaushan Script', cursive;
+    font-size: 5rem;
+}
+@media screen and (max-width: 600px){
+    h1{
+        font-size: 3rem;
+    }
+    p:first-of-type{
+        font-size: .75rem;
+    }
+}
+
+/* Form */
+
+form#input{
+    width: 100%;
+    padding: 30px 10px;
+    border-radius: 30px;
+    border: 2px solid var(--sec-acc);
+    background-color: var(--secbgc);
+}
+
+#inputDiv input{
+    width: 50%;
+    margin-bottom: 8px;
+}
+form #inputDiv{
+    margin: 0 auto;
+    width: 75%;
+    display: flex;
+}
+#inputDiv>input{
+    flex: 3;
+    border-radius: 5px;
+    border: none;
+    padding: 7.5px;
+    margin-right: 5px;
+}
+#inputDiv>button{
+    flex: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 5px;
+    background-color: #689999;
+    margin-bottom: 8px;
+}
+#inputDiv>button:hover{
+    background-color: #408080;
+}
+@media only screen and (max-width: 600px){
+    form #inputDiv{
+        flex-direction: column;
+        align-items: center;
+    }
+    #inputDiv>input{
+        width: 100%
+    }
+}
+#shortDomains{
+    width: 90%;
+    margin: 5px auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+#shortDomains p{
+    padding: 10px;
+    margin: 0;
+}
+#shortDomains label{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#shortDomains input{
+    display: none;
+}
+#shortDomains input[type="radio"]:checked + label{
+    background-color:var(--bgc);
+}
+
+.spinner-hidden{
+    display: none;
+}
+
+#errorMsg{
+    color: red;
+    font-weight: bold;
+}
+
+/* Display Links */
+a#clearLinks{
+    margin: 1rem auto;
+
+}
+div#links{
+    display: flex;
+    flex-direction: column;
+}
+div.linkDiv{
+    background-color: white;
+    color: var(--bgc);
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    border-radius: 30px;
+    border: 2px solid var(--sec-acc);
+    margin: 0 auto 10px;
+    display: flex;
+    align-items: center;
+    width: 75%;
+}
+.link{
+    color: var(--sec-acc);
+    cursor: pointer;
+}
+.link:hover{
+    color: var(--sec-acc);
+    text-decoration: none;
+}
+.wordwrap { 
+    white-space: pre-wrap;      /* CSS3 */   
+    white-space: -moz-pre-wrap; /* Firefox */    
+    white-space: -pre-wrap;     /* Opera <7 */   
+    white-space: -o-pre-wrap;   /* Opera 7 */    
+    word-wrap: break-word;      /* IE */
+ }
+#copy{
+    border: none;
+    border-radius: 5px;
+    background-color: #689999;
+}
+#copy:hover{
+    background-color: #408080;
+}
+#new-link{
+    font-size: 2em;
+}
+#original-link{
+    font-size: 0.75em;
+}
